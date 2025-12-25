@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=BBH+Bogle&family=Baloo+Bhai+2:wght@400..800&family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap");
-
+body{
+  background-color: black;
+}
 * {
   padding: 0;
   margin: 0;
@@ -118,19 +120,134 @@ nav .button2 {
 .cards{
   flex-shrink: calc(1.2);
   display: flex;
-  height: 80vh;
-  justify-content: center;
-  align-items: center;
+  /* flex-direction: column; */
+  gap: 16px;
+  overflow-x: auto;
+  padding: 20px;
+  background-color: black;
+  align-items: flex-start; 
+  height: auto; 
   background-color: black;
   gap: 16px;
   overflow-x: auto;
   padding: 20px;
   scroll-behavior: smooth;
 }
-.cards::-webkit-scrollbar {
-  height: 8px;
+@media  (max-width:450px) {
+  .cards{
+    flex-direction: column;
+  }
+  .reasons{
+    flex-direction: column;
+    height: 450px;
+    
+  }
 }
-.cards::-webkit-scrollbar-thumb {
-  background: #444;
+.cards::-webkit-scrollbar {
+  height: 0px;
+}
+
+.trends {
+  background-color: black;
+  padding: 20px 40px 0;
+  font-size: 17px;
+  font-family: "Martel Sans", sans-serif;
+}
+.movies:hover{
+  transform: scale(1.04);
+  transition: 0.3s ease-in-out;
+}
+.reasons{
+  background-color: black;
+  color: white;
+  padding: 20px 40px;
+  font-size: 17px;
+  display: flex;
+  gap: 20px;
+  font-family: "Martel Sans", sans-serif;
+}
+.h1{
+  background-color: black;
+  color: white;
+  padding: 20px 40px 0px;
+  font-family: "Martel Sans", sans-serif;
+}
+.four{
+  height: 350px;
+  width: 300px;
+  border: 2px solid;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(135deg,rgba(45, 45, 107, 0.334) 30%,rgba(84, 32, 32, 0.373));
+}
+.faq {
+  padding: 20px 40px;
+  background-color: black;
+  margin: auto;
+  padding: 40px 20px;
+  color: white;
+}
+
+.faq h2 {
+  padding: 10px 40px 20px;
+  margin-left: -34px;
+}
+
+details {
+  background: #2d2d2d;
+  margin-bottom: 10px;
   border-radius: 4px;
+  width: 900px;
+  gap: 10px;
+}
+
+summary {
+  list-style: none;
+  padding: 20px;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+details p {
+  padding: 20px;
+  font-size: 18px;
+  border-top: 1px solid black;
+}
+
+details[open] summary .icon {
+  content: "×";
+}
+
+.icon {
+  font-size: 30px;
+}
+section h2{
+  padding: 20px 40px;
+}
+.faqq {
+  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;;
+  max-width: 900px;     
+  /* margin: 0 auto;        */
+  padding: 10px 20px;
+  color: rgb(12, 12, 12);
+}
+.fsu{
+  margin-top: -25px;
+  border: 2px solid;
+  border: none;
+  padding: 15px;
+  width: 230px;
+  background-color: red;
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+ margin-left: 42px;
+
 }
